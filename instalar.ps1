@@ -262,6 +262,8 @@ function Install-Download($s, $simular) {
 
 function Main {
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+    # sem isso o PowerShell 5.1 escreve o ✓ como ?
+    [Console]::OutputEncoding = [Text.Encoding]::UTF8
 
     if (-not (Test-Admin)) {
         Write-Host 'Abrindo como administrador (confirme o aviso do Windows)...' -ForegroundColor Cyan
@@ -301,7 +303,12 @@ function Main {
                 if ($s.licenca -eq 'pago') { $r += '; licença paga' }
             }
         }
-        Write-Host "  $r"
+        if ($r -eq 'ok') {
+            $r = "$([char]0x2713) Instalado"
+            Write-Host "  $r" -ForegroundColor Green
+        } else {
+            Write-Host "  $r"
+        }
         $resultados += [pscustomobject]@{ Programa = $s.nome; Resultado = $r }
     }
 
