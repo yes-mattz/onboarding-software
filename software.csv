@@ -1,0 +1,71 @@
+nome,finalidade,perfil,prioridade,versao,licenca,instalacao,winget_id,winget_versao,download_url,sha256,args,categoria,link
+AnyDesk,Acesso remoto,base,essencial,9.0.10,pago,winget,AnyDesk.AnyDesk,,,,,utilitario,
+Foxit PDF Reader,Leitor de PDF,base,essencial,12.1.3.15356,gratuito,winget,Foxit.FoxitReader,,,,,escritorio,
+Git,Controle de versão de código,base,essencial,2.52.0,gratuito,winget,Git.Git,,,,,desenvolvimento,https://git-scm.com/install/windows
+Google Chrome,Navegador web,base,essencial,,gratuito,winget,Google.Chrome,,,,,escritorio,
+KiCad,CAD eletrônico (esquemático e PCB),base,essencial,,gratuito,winget,KiCad.KiCad,,,,,cad,https://www.kicad.org/download/
+LTspice,Simulador eletrônico,base,essencial,24.1.9.1+,gratuito,winget,AnalogDevices.LTspice,,,,,simulacao,https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html
+Notepad++,Editor de texto,base,essencial,8.5.3,gratuito,winget,Notepad++.Notepad++,,,,,desenvolvimento,
+Office Desktop,"Word, PowerPoint, OneNote, Excel e Outlook",base,essencial,,pago,winget,Microsoft.Office,,,,,escritorio,
+PowerToys,Ferramenta de produtividade do Windows,base,essencial,0.95.1,gratuito,winget,Microsoft.PowerToys,,,,,utilitario,
+SMath Studio,Cálculo matemático,base,essencial,1.0.8151,gratuito,winget,SMath.SMathStudio,,,,,calculo,https://smath.com/en-US/view/SMathStudio/download
+TortoiseGit,Interface Git para Windows,base,essencial,2.18.0.1,gratuito,winget,TortoiseGit.TortoiseGit,,,,,desenvolvimento,https://tortoisegit.org/download/
+Visual Studio Code,Editor de código (IDE),base,essencial,1.108.2,gratuito,winget,Microsoft.VisualStudioCode,,,,,desenvolvimento,https://code.visualstudio.com/download
+Zoom Workplace,Videoconferência,base,essencial,,gratuito,winget,Zoom.Zoom,,,,,escritorio,
+CamStudio,Gravação de tela,base,sob-demanda,2.7.4,gratuito,manual,,,,,,utilitario,
+CorelDRAW Graphics Suite,Design gráfico e vetorização,base,sob-demanda,2025,pago,manual,,,,,,escritorio,
+CPUID HW Monitor,Monitor de temperatura e sensores do PC,base,sob-demanda,1.47,gratuito,winget,CPUID.HWMonitor,,,,,utilitario,
+Inkscape,Vetorização gráfica,base,sob-demanda,,gratuito,winget,Inkscape.Inkscape,,,,,escritorio,
+MathType,Editor de equações,base,sob-demanda,,pago,manual,,,,,,escritorio,
+Mozilla Firefox (x64),Navegador web,base,sob-demanda,,gratuito,winget,Mozilla.Firefox,,,,,escritorio,
+PDF-XChange Editor,Edição de arquivos PDF,base,sob-demanda,,gratuito,winget,TrackerSoftware.PDF-XChangeEditor,,,,,escritorio,
+VLC Media Player,Reprodutor multimídia,base,sob-demanda,3.0.20,gratuito,winget,VideoLAN.VLC,,,,,utilitario,
+Atmel Driver Files,Drivers para microcontroladores Atmel,firmware,essencial,,gratuito,manual,,,,,,microcontrolador,
+MPLAB X IDE / MPLAB IPE,IDE microcontrolador Microchip e Atmel,firmware,essencial,6.25+,gratuito,manual,,,,,,microcontrolador,https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide
+MPLAB XC-DSC,Compilador Microchip dsPIC,firmware,essencial,,gratuito,manual,,,,,,microcontrolador,https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc-dsc
+MPLAB XC16,Compilador Microchip 16 bits,firmware,essencial,,gratuito,winget,Microchip.MPLABXC16CCompiler,,,,,microcontrolador,
+MPLAB XC8,Compilador Microchip 8 bits,firmware,essencial,,gratuito,winget,Microchip.MPLABXC8CCompiler,,,,,microcontrolador,
+PICkit 2,Gravador e depurador Microchip,firmware,essencial,2.61,gratuito,manual,,,,,,microcontrolador,https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-ecosystem-downloads-archive
+PICkit 3,Gravador de microcontroladores PIC,firmware,essencial,3.10,gratuito,manual,,,,,,microcontrolador,https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-ecosystem-downloads-archive
+PulseView,Analisador lógico,firmware,essencial,0.5.0,gratuito,manual,,,,,,instrumentacao,https://sigrok.org/wiki/Downloads
+PuTTY,Comunicação serial,firmware,essencial,0.79,gratuito,winget,PuTTY.PuTTY,,,,,comunicacao,https://putty.org/index.html
+RealTerm,Comunicação serial,firmware,essencial,2.0.0.70,gratuito,download,,,https://downloads.sourceforge.net/project/realterm/Realterm/2.0.0.70/Realterm_2.0.0.70_Signed_Wrapper_setup.exe,F75B79C1E7FD34B0B33C848C6DF0BBE9AE48E981CB56002B42D63BB4B60E53B0,,comunicacao,https://sourceforge.net/projects/realterm/
+Tera Term,Comunicação serial,firmware,essencial,,gratuito,winget,TeraTermProject.teraterm5,,,,,comunicacao,https://teratermproject.github.io/index-en.html
+Arduino IDE,IDE microcontrolador Arduino,firmware,sob-demanda,2.3.4,gratuito,winget,ArduinoSA.IDE.stable,,,,,microcontrolador,https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE
+CCS C Compiler (PIC-C),IDE e compilador C para PIC,firmware,sob-demanda,5.015,pago,manual,,,,,,microcontrolador,
+CMT IDE / CMT Writer,IDE microcontrolador Hope RF,firmware,sob-demanda,2.1.5 / 5.2.3,gratuito,manual,,,,,,microcontrolador,
+e² studio / Renesas Flash Programmer,IDE microcontrolador Renesas,firmware,sob-demanda,24.7.0 / 3.19,gratuito,manual,,,,,,microcontrolador,https://www.renesas.com/en/software-tool/e2-studio
+FMD IDE / FMD Programmer,IDE microcontrolador FMD,firmware,sob-demanda,3.1.1.3 / 5.3.8.0,gratuito,manual,,,,,,microcontrolador,
+HT-IDE3000 / HOPE3000,IDE microcontrolador Holtek,firmware,sob-demanda,,gratuito,manual,,,,,,microcontrolador,
+Keil uVision,IDE núcleo ARM,firmware,sob-demanda,5.42.0.0,pago,manual,,,,,,microcontrolador,
+MCUXpresso IDE / Config Tools,IDE microcontrolador NXP,firmware,sob-demanda,v11.8.1_1197 / v15,gratuito,manual,,,,,,microcontrolador,
+Microchip Studio,IDE microcontrolador Microchip e Atmel,firmware,sob-demanda,7.0.2594,gratuito,download,,,https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/as-installer-7.0.2594-full.exe,C964AD7F5F11924805D679A4F3E02D9D15EC82D3F84E58407675109FD8E93BC2,,microcontrolador,https://www.microchip.com/en-us/tools-resources/develop/microchip-studio
+Nextion Editor,Editor de telas HMI Nextion,firmware,sob-demanda,3.1.59,gratuito,manual,,,,,,desenvolvimento,https://nextion.tech/nextion-editor/
+Node.js,Ambiente JavaScript (ferramentas de desenvolvimento),firmware,sob-demanda,22.16.0,gratuito,winget,OpenJS.NodeJS.LTS,,,,,desenvolvimento,
+NuEclipse / NuMicro ICP Programming Tool,IDE microcontrolador Nuvoton,firmware,sob-demanda,1.02.024r,gratuito,manual,,,,,,microcontrolador,
+NYIDE / Q-Writer,IDE microcontrolador Nyquest,firmware,sob-demanda,5.10 / 5.44,gratuito,manual,,,,,,microcontrolador,
+Padauk FPPA IDE / Writer,IDE microcontrolador Padauk,firmware,sob-demanda,1.0.3A1,gratuito,manual,,,,,,microcontrolador,
+Postman,Teste de APIs HTTP,firmware,sob-demanda,11.20.0,gratuito,winget,Postman.Postman,,,,,desenvolvimento,
+PSoC Creator / PSoC Programmer,IDE microcontrolador Infineon,firmware,sob-demanda,4.4 / 3.29.6,gratuito,manual,,,,,,microcontrolador,
+Visual Studio 2022,IDE C/C++/C# para aplicações Windows,firmware,sob-demanda,,pago,winget,Microsoft.VisualStudio.2022.Community,,,,,desenvolvimento,
+AppCAD,Calculadora de RF e microondas,hardware,essencial,4.0.0,gratuito,manual,,,,,,calculo,
+DFM Now!,Análise de manufaturabilidade de PCB,hardware,essencial,8.1.6,gratuito,manual,,,,,,cad,
+FreeCAD,Modelagem CAD 3D,hardware,essencial,1.0.0,gratuito,winget,FreeCAD.FreeCAD,,,,,cad,
+Octave,Ambiente matemático,hardware,essencial,7.2.0,gratuito,winget,GNU.Octave,,,,,calculo,
+QSpice,Simulador eletrônico,hardware,essencial,,gratuito,manual,,,,,,simulacao,https://www.qorvo.com/design-hub/calculators-simulation/qspice/get-qspice
+Altium,Projeto de placas antigos para revisar (fora de rede),hardware,sob-demanda,18+,pago,manual,,,,,,cad,
+AutoCAD,CAD 2D/3D mecânico,hardware,sob-demanda,2021+,pago,manual,,,,,,cad,
+CircuitStudio,CAD eletrônico,hardware,sob-demanda,1.5.2.30,pago,manual,,,,,,cad,
+Mathcad,Cálculo e documentação de engenharia (fora de rede),hardware,sob-demanda,15,pago,manual,,,,,,calculo,
+Matlab,Simulação de modelos matemáticos,hardware,sob-demanda,2022+,pago,manual,,,,,,calculo,
+DIALux evo,Cálculo luminotécnico,iluminacao,essencial,,gratuito,winget,DIAL.DIALux-evo,,,,,iluminacao,
+ICAP 4 Windows Demo,Software óptico / fotometria,iluminacao,essencial,Build 4444,gratuito,manual,,,,,,iluminacao,
+LSG-1800B Goniophotometer,Medições fotométricas (goniofotômetro),iluminacao,essencial,,gratuito,manual,,,,,,iluminacao,
+LTD Editor,Editor de curvas IES,iluminacao,essencial,1.5.1.0,gratuito,manual,,,,,,iluminacao,
+OxyTech LITESTAR 4D,Simulação luminotécnica,iluminacao,essencial,,gratuito,manual,,,,,,iluminacao,
+AC SOURCE GUI,Controle da fonte AC programável,bancada,essencial,,gratuito,manual,,,,,,instrumentacao,
+ANL7000,Software técnico de instrumentação: analisador de energia,bancada,essencial,5.05,gratuito,manual,,,,,,instrumentacao,
+CPR Standard USB Driver,Driver USB,bancada,essencial,2.5.0.0,gratuito,manual,,,,,,utilitario,
+Fresco Logic USB Display Driver,Driver de vídeo USB,bancada,essencial,2.1.36287.0,gratuito,manual,,,,,,utilitario,
+RIGOL Ultra Sigma,Controle de instrumentos Rigol pelo PC,bancada,essencial,1.6.1,gratuito,manual,,,,,,instrumentacao,
+S1210 EMI Pre-Compliance,Pré-conformidade EMI,bancada,essencial,00.06.00.02,gratuito,manual,,,,,,instrumentacao,
