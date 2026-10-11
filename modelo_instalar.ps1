@@ -161,7 +161,7 @@ function Install-Winget($s, $simular) {
 
 function Install-Download($s, $simular) {
     $pasta = Join-Path $env:TEMP 'onboarding'
-    $arquivo = Join-Path $pasta ([IO.Path]::GetFileName(([uri]$s.download_url).AbsolutePath))
+    $arquivo = Join-Path $pasta ([uri]::UnescapeDataString([IO.Path]::GetFileName(([uri]$s.download_url).AbsolutePath)))
     if ($simular) { Write-Host "  baixar $($s.download_url)"; Write-Host "  conferir SHA-256 $($s.sha256) e executar"; return 'simulado' }
     New-Item -ItemType Directory -Force -Path $pasta | Out-Null
     Write-Host "  baixando $($s.download_url)"
@@ -214,12 +214,14 @@ function Main {
     Write-Host "`nInstalando $($escolha.Programas.Count) programa(s)$modo" -ForegroundColor Cyan
 
     $resultados = @()
-    $ordem = @{ winget = 0; download = 1; manual = 2 }
+    $ordem = @{ winget = 0; download = 1; pasta = 1; manual = 2 }
     foreach ($s in $escolha.Programas | Sort-Object { $ordem[$_.instalacao] }) {
         Write-Host "`n> $($s.nome)" -ForegroundColor Cyan
         switch ($s.instalacao) {
             'winget'   { $r = Install-Winget $s $escolha.Simular }
             'download' { $r = Install-Download $s $escolha.Simular }
+            # pasta: instalador do repositório, baixado pelo GitHub Pages com a mesma conferência de hash
+            'pasta'    { $r = Install-Download $s $escolha.Simular }
             'manual'   {
                 if ($s.link) {
                     if (-not $escolha.Simular) { Start-Process $s.link }

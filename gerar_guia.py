@@ -7,14 +7,20 @@ Uso: python gerar_guia.py
 """
 
 import csv
+import hashlib
 import re
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 PASTA = Path(__file__).resolve().parent
 CSV = PASTA / "software.csv"
 MODELO = PASTA / "modelo_instalar.ps1"
+# Instaladores versionados no repositório e servidos pelo GitHub Pages (instalacao = pasta).
+# O repositório é público: só programas gratuitos que o fabricante permite redistribuir.
+INSTALADORES = PASTA / "instaladores"
+LIMITE_MB = 100  # o GitHub recusa arquivo maior que 100 MB
 
 # i.txt é cópia de instalar.ps1 servida pelo GitHub Pages: endereço curto e text/plain
 # (o Pages entrega .ps1 como octet-stream, que o irm do PowerShell 7 pode devolver como bytes).
@@ -34,7 +40,7 @@ PERFIS = {
 }
 PRIORIDADES = {"essencial", "sob-demanda"}
 LICENCAS = {"gratuito", "pago"}
-INSTALACOES = {"winget", "download", "manual"}
+INSTALACOES = {"winget", "download", "pasta", "manual"}
 CAMPOS_PS = ("nome", "finalidade", "perfil", "prioridade", "versao", "licenca", "instalacao",
              "winget_id", "winget_versao", "download_url", "sha256", "args", "link")
 
@@ -56,6 +62,19 @@ def ler():
                 erros.append(f"{onde}: download sem download_url https")
             if not re.fullmatch(r"[0-9A-Fa-f]{64}", r["sha256"]):
                 erros.append(f"{onde}: download sem sha256 válido")
+        if r["instalacao"] == "pasta":
+            arquivo = INSTALADORES / r["arquivo"]
+            if r["licenca"] == "pago":
+                erros.append(f"{onde}: programa pago não pode ir para a pasta (repositório público)")
+            elif not r["arquivo"] or not arquivo.is_file():
+                erros.append(f"{onde}: pasta sem arquivo; colocar o instalador em instaladores/ e o nome na coluna arquivo")
+            elif arquivo.stat().st_size > LIMITE_MB * 1024 * 1024:
+                erros.append(f"{onde}: {r['arquivo']} passa de {LIMITE_MB} MB (limite do GitHub)")
+            else:
+                # o script baixa pelo GitHub Pages e confere o hash, como no download
+                r["download_url"] = f"{URL_SCRIPT.rsplit('/', 1)[0]}/instaladores/{quote(r['arquivo'])}"
+                with open(arquivo, "rb") as f:
+                    r["sha256"] = hashlib.file_digest(f, "sha256").hexdigest().upper()
     nomes = [r["nome"] for r in linhas]
     erros += [f"nome repetido: {n}" for n in sorted({n for n in nomes if nomes.count(n) > 1})]
     return linhas, erros
@@ -76,6 +95,8 @@ def como_instala(r):
         return "automático (winget)"
     if r["instalacao"] == "download":
         return "automático (site do fabricante, com conferência de hash)"
+    if r["instalacao"] == "pasta":
+        return "automático (pasta do kit, com conferência de hash)"
     if r["link"]:
         return f"manual: [página do fabricante]({r['link']})"
     return f"manual: pedir a {responsavel()}"

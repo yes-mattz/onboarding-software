@@ -2,3 +2,5 @@ __pycache__/
 *.exe
 *.msi
 *.zip
+# instaladores do kit (instalacao = pasta) vão para o repositório
+!instaladores/*

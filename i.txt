@@ -12,19 +12,19 @@ $UrlScript = 'https://yes-mattz.github.io/onboarding-software/i.txt'
 $Responsavel = 'Cristiano Facco'
 
 $Software = @(
-    [pscustomobject]@{ nome = 'AnyDesk'; finalidade = 'Acesso remoto'; perfil = 'base'; prioridade = 'essencial'; versao = '9.0.10'; licenca = 'pago'; instalacao = 'winget'; winget_id = 'AnyDesk.AnyDesk'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
+    [pscustomobject]@{ nome = 'AnyDesk'; finalidade = 'Acesso remoto'; perfil = 'base'; prioridade = 'sob-demanda'; versao = '9.0.10'; licenca = 'pago'; instalacao = 'winget'; winget_id = 'AnyDesk.AnyDesk'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'Foxit PDF Reader'; finalidade = 'Leitor de PDF'; perfil = 'base'; prioridade = 'essencial'; versao = '12.1.3.15356'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Foxit.FoxitReader'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'Git'; finalidade = 'Controle de versão de código'; perfil = 'base'; prioridade = 'essencial'; versao = '2.52.0'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Git.Git'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://git-scm.com/install/windows' },
     [pscustomobject]@{ nome = 'Google Chrome'; finalidade = 'Navegador web'; perfil = 'base'; prioridade = 'essencial'; versao = ''; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Google.Chrome'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'KiCad'; finalidade = 'CAD eletrônico (esquemático e PCB)'; perfil = 'base'; prioridade = 'essencial'; versao = ''; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'KiCad.KiCad'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://www.kicad.org/download/' },
     [pscustomobject]@{ nome = 'LTspice'; finalidade = 'Simulador eletrônico'; perfil = 'base'; prioridade = 'essencial'; versao = '24.1.9.1+'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'AnalogDevices.LTspice'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html' },
     [pscustomobject]@{ nome = 'Notepad++'; finalidade = 'Editor de texto'; perfil = 'base'; prioridade = 'essencial'; versao = '8.5.3'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Notepad++.Notepad++'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
-    [pscustomobject]@{ nome = 'Office Desktop'; finalidade = 'Word, PowerPoint, OneNote, Excel e Outlook'; perfil = 'base'; prioridade = 'essencial'; versao = ''; licenca = 'pago'; instalacao = 'winget'; winget_id = 'Microsoft.Office'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
+    [pscustomobject]@{ nome = 'Office Desktop'; finalidade = 'Word, PowerPoint, OneNote, Excel e Outlook'; perfil = 'base'; prioridade = 'sob-demanda'; versao = ''; licenca = 'pago'; instalacao = 'winget'; winget_id = 'Microsoft.Office'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'PowerToys'; finalidade = 'Ferramenta de produtividade do Windows'; perfil = 'base'; prioridade = 'essencial'; versao = '0.95.1'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Microsoft.PowerToys'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'SMath Studio'; finalidade = 'Cálculo matemático'; perfil = 'base'; prioridade = 'essencial'; versao = '1.0.8151'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'SMath.SMathStudio'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://smath.com/en-US/view/SMathStudio/download' },
     [pscustomobject]@{ nome = 'TortoiseGit'; finalidade = 'Interface Git para Windows'; perfil = 'base'; prioridade = 'essencial'; versao = '2.18.0.1'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'TortoiseGit.TortoiseGit'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://tortoisegit.org/download/' },
     [pscustomobject]@{ nome = 'Visual Studio Code'; finalidade = 'Editor de código (IDE)'; perfil = 'base'; prioridade = 'essencial'; versao = '1.108.2'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Microsoft.VisualStudioCode'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = 'https://code.visualstudio.com/download' },
-    [pscustomobject]@{ nome = 'Zoom Workplace'; finalidade = 'Videoconferência'; perfil = 'base'; prioridade = 'essencial'; versao = ''; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Zoom.Zoom'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
+    [pscustomobject]@{ nome = 'Zoom Workplace'; finalidade = 'Videoconferência'; perfil = 'base'; prioridade = 'sob-demanda'; versao = ''; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'Zoom.Zoom'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'CamStudio'; finalidade = 'Gravação de tela'; perfil = 'base'; prioridade = 'sob-demanda'; versao = '2.7.4'; licenca = 'gratuito'; instalacao = 'manual'; winget_id = ''; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'CorelDRAW Graphics Suite'; finalidade = 'Design gráfico e vetorização'; perfil = 'base'; prioridade = 'sob-demanda'; versao = '2025'; licenca = 'pago'; instalacao = 'manual'; winget_id = ''; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
     [pscustomobject]@{ nome = 'CPUID HW Monitor'; finalidade = 'Monitor de temperatura e sensores do PC'; perfil = 'base'; prioridade = 'sob-demanda'; versao = '1.47'; licenca = 'gratuito'; instalacao = 'winget'; winget_id = 'CPUID.HWMonitor'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
@@ -234,7 +234,7 @@ function Install-Winget($s, $simular) {
 
 function Install-Download($s, $simular) {
     $pasta = Join-Path $env:TEMP 'onboarding'
-    $arquivo = Join-Path $pasta ([IO.Path]::GetFileName(([uri]$s.download_url).AbsolutePath))
+    $arquivo = Join-Path $pasta ([uri]::UnescapeDataString([IO.Path]::GetFileName(([uri]$s.download_url).AbsolutePath)))
     if ($simular) { Write-Host "  baixar $($s.download_url)"; Write-Host "  conferir SHA-256 $($s.sha256) e executar"; return 'simulado' }
     New-Item -ItemType Directory -Force -Path $pasta | Out-Null
     Write-Host "  baixando $($s.download_url)"
@@ -287,12 +287,14 @@ function Main {
     Write-Host "`nInstalando $($escolha.Programas.Count) programa(s)$modo" -ForegroundColor Cyan
 
     $resultados = @()
-    $ordem = @{ winget = 0; download = 1; manual = 2 }
+    $ordem = @{ winget = 0; download = 1; pasta = 1; manual = 2 }
     foreach ($s in $escolha.Programas | Sort-Object { $ordem[$_.instalacao] }) {
         Write-Host "`n> $($s.nome)" -ForegroundColor Cyan
         switch ($s.instalacao) {
             'winget'   { $r = Install-Winget $s $escolha.Simular }
             'download' { $r = Install-Download $s $escolha.Simular }
+            # pasta: instalador do repositório, baixado pelo GitHub Pages com a mesma conferência de hash
+            'pasta'    { $r = Install-Download $s $escolha.Simular }
             'manual'   {
                 if ($s.link) {
                     if (-not $escolha.Simular) { Start-Process $s.link }

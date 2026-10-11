@@ -25,7 +25,7 @@ O perfil `base` vai para todos. Some a ele o(s) da sua função; na dúvida, per
 
 | Perfil | Para quem | Essenciais |
 |---|---|---|
-| `base` | Todos os colaboradores | 13 |
+| `base` | Todos os colaboradores | 10 |
 | `firmware` | Desenvolvimento de firmware: microcontroladores, gravadores, comunicação serial | 11 |
 | `hardware` | Projeto de hardware e eletrônica de potência: simulação, cálculo, CAD | 5 |
 | `iluminacao` | Luminotécnica e fotometria | 5 |
@@ -41,24 +41,24 @@ Todos os colaboradores.
 
 | Programa | Para que serve | Versão | Instalação | Licença |
 |---|---|---|---|---|
-| AnyDesk | Acesso remoto | última | automático (winget) | pago |
 | Foxit PDF Reader | Leitor de PDF | última | automático (winget) | gratuito |
 | Git | Controle de versão de código | última | automático (winget) | gratuito |
 | Google Chrome | Navegador web | última | automático (winget) | gratuito |
 | KiCad | CAD eletrônico (esquemático e PCB) | última | automático (winget) | gratuito |
 | LTspice | Simulador eletrônico | última | automático (winget) | gratuito |
 | Notepad++ | Editor de texto | última | automático (winget) | gratuito |
-| Office Desktop | Word, PowerPoint, OneNote, Excel e Outlook | última | automático (winget) | pago |
 | PowerToys | Ferramenta de produtividade do Windows | última | automático (winget) | gratuito |
 | SMath Studio | Cálculo matemático | última | automático (winget) | gratuito |
 | TortoiseGit | Interface Git para Windows | última | automático (winget) | gratuito |
 | Visual Studio Code | Editor de código (IDE) | última | automático (winget) | gratuito |
-| Zoom Workplace | Videoconferência | última | automático (winget) | gratuito |
 
 **Sob demanda**
 
 | Programa | Para que serve | Versão | Instalação | Licença |
 |---|---|---|---|---|
+| AnyDesk | Acesso remoto | última | automático (winget) | pago |
+| Office Desktop | Word, PowerPoint, OneNote, Excel e Outlook | última | automático (winget) | pago |
+| Zoom Workplace | Videoconferência | última | automático (winget) | gratuito |
 | CamStudio | Gravação de tela | 2.7.4 | manual: pedir a Cristiano Facco | gratuito |
 | CorelDRAW Graphics Suite | Design gráfico e vetorização | 2025 | manual: pedir a Cristiano Facco | pago |
 | CPUID HW Monitor | Monitor de temperatura e sensores do PC | última | automático (winget) | gratuito |
@@ -167,8 +167,8 @@ Quem usa os equipamentos de bancada (analisador de energia, fonte AC, osciloscó
 
 Precisam de licença da empresa: pedir a Cristiano Facco antes de usar.
 
-- AnyDesk (base, essencial)
-- Office Desktop (base, essencial)
+- AnyDesk (base, sob-demanda)
+- Office Desktop (base, sob-demanda)
 - CorelDRAW Graphics Suite (base, sob-demanda)
 - MathType (base, sob-demanda)
 - CCS C Compiler (PIC-C) (firmware, sob-demanda)
