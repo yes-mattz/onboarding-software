@@ -9,7 +9,7 @@
 # Sem bloco param() e sem exit: o script também roda via Invoke-Expression, na sessão do usuário.
 
 $UrlScript = 'https://yes-mattz.github.io/onboarding-software/i.txt'
-$Responsavel = '(responsável a definir)'
+$Responsavel = 'Cristiano Facco'
 
 $Software = @(
     [pscustomobject]@{ nome = 'AnyDesk'; finalidade = 'Acesso remoto'; perfil = 'base'; prioridade = 'essencial'; versao = '9.0.10'; licenca = 'pago'; instalacao = 'winget'; winget_id = 'AnyDesk.AnyDesk'; winget_versao = ''; download_url = ''; sha256 = ''; args = ''; link = '' },
@@ -147,7 +147,7 @@ function Show-Selecao($instalados) {
     # largura antes dos botões: a âncora à direita usa a largura do painel no momento em que são posicionados
     $rodape.Size = New-Object System.Drawing.Size($form.ClientSize.Width, 48); $rodape.Dock = 'Bottom'
     $simular = New-Object System.Windows.Forms.CheckBox
-    $simular.Text = 'Simular (não instala nada, só mostra o que faria)'
+    $simular.Text = 'Simular'
     $simular.AutoSize = $true; $simular.Location = New-Object System.Drawing.Point(10, 14)
     $contador = New-Object System.Windows.Forms.Label
     $contador.AutoSize = $true; $contador.Location = New-Object System.Drawing.Point(380, 15)

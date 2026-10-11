@@ -74,7 +74,7 @@ function Show-Selecao($instalados) {
     # largura antes dos botões: a âncora à direita usa a largura do painel no momento em que são posicionados
     $rodape.Size = New-Object System.Drawing.Size($form.ClientSize.Width, 48); $rodape.Dock = 'Bottom'
     $simular = New-Object System.Windows.Forms.CheckBox
-    $simular.Text = 'Simular (não instala nada, só mostra o que faria)'
+    $simular.Text = 'Simular'
     $simular.AutoSize = $true; $simular.Location = New-Object System.Drawing.Point(10, 14)
     $contador = New-Object System.Windows.Forms.Label
     $contador.AutoSize = $true; $contador.Location = New-Object System.Drawing.Point(380, 15)

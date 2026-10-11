@@ -23,7 +23,7 @@ URL_SCRIPT = "https://yes-mattz.github.io/onboarding-software/i.txt"
 COMANDO = f"irm {URL_SCRIPT.removeprefix('https://')} | iex"
 
 # Quem responde dúvidas e libera licenças. Preencher e rodar de novo.
-RESPONSAVEL = ""
+RESPONSAVEL = "Cristiano Facco"
 
 PERFIS = {
     "base": "Todos os colaboradores",
