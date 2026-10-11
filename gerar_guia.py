@@ -1,4 +1,4 @@
-"""Gera README.md (guia do colaborador) e instalar.ps1 a partir de software.csv.
+"""Gera README.md (guia do colaborador), instalar.ps1 e i.txt a partir de software.csv.
 
 software.csv é a fonte única; instalar.ps1 sai de modelo_instalar.ps1 com os dados embutidos.
 Para mudar o guia ou o script, editar o CSV (ou o modelo) e rodar de novo.
@@ -16,8 +16,11 @@ PASTA = Path(__file__).resolve().parent
 CSV = PASTA / "software.csv"
 MODELO = PASTA / "modelo_instalar.ps1"
 
-URL_SCRIPT = "https://raw.githubusercontent.com/yes-mattz/onboarding-software/main/instalar.ps1"
-COMANDO = f"irm {URL_SCRIPT} | iex"
+# i.txt é cópia de instalar.ps1 servida pelo GitHub Pages: endereço curto e text/plain
+# (o Pages entrega .ps1 como octet-stream, que o irm do PowerShell 7 pode devolver como bytes).
+# Sem https:// no comando para encurtar: o irm usa http e o Pages redireciona para https.
+URL_SCRIPT = "https://yes-mattz.github.io/onboarding-software/i.txt"
+COMANDO = f"irm {URL_SCRIPT.removeprefix('https://')} | iex"
 
 # Quem responde dúvidas e libera licenças. Preencher e rodar de novo.
 RESPONSAVEL = ""
@@ -193,10 +196,11 @@ def main():
     (PASTA / "README.md").write_text(gerar_readme(linhas), encoding="utf-8")
     # UTF-8 sem BOM: o BOM quebra o irm | iex. O próprio script regrava a cópia elevada com BOM.
     ps1 = gerar_ps1(linhas).replace("\r\n", "\n").replace("\n", "\r\n")
-    (PASTA / "instalar.ps1").write_bytes(ps1.encode("utf-8"))
+    for nome in ("instalar.ps1", "i.txt"):
+        (PASTA / nome).write_bytes(ps1.encode("utf-8"))
     por_tipo = {t: sum(1 for r in linhas if r["instalacao"] == t) for t in sorted(INSTALACOES)}
     print(f"{len(linhas)} programas ({', '.join(f'{t}: {n}' for t, n in por_tipo.items())}).")
-    print("Gerados README.md e instalar.ps1.")
+    print("Gerados README.md, instalar.ps1 e i.txt.")
     manuais = [r for r in linhas if r["instalacao"] == "manual" and r["prioridade"] == "essencial" and not r["link"]]
     if manuais:
         print(f"\nEssenciais manuais sem link ({len(manuais)}): o colaborador terá de pedir ao responsável.")

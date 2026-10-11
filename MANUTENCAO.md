@@ -8,9 +8,10 @@ Para quem mantém a lista. O colaborador só usa o comando do [README.md](README
 |---|---|---|
 | `software.csv` | Fonte única: um programa por linha | Sim |
 | `modelo_instalar.ps1` | Modelo do script (janela, instalação, resumo); os dados entram nas marcas `#__DADOS__` etc. | Só para mudar o comportamento |
-| `gerar_guia.py` | Gera `README.md` e `instalar.ps1`; valida o CSV. `RESPONSAVEL` e `URL_SCRIPT` ficam no início | Raramente |
+| `gerar_guia.py` | Gera `README.md`, `instalar.ps1` e `i.txt`; valida o CSV. `RESPONSAVEL` e `URL_SCRIPT` ficam no início | Raramente |
 | `README.md` | Guia do colaborador | Não (gerado) |
-| `instalar.ps1` | Script que o comando baixa e executa | Não (gerado) |
+| `instalar.ps1` | Script completo; também serve para baixar e rodar com botão direito | Não (gerado) |
+| `i.txt` | Cópia de `instalar.ps1` que o comando baixa, servida pelo GitHub Pages (`yes-mattz.github.io/onboarding-software/i.txt`). `.txt` para vir como `text/plain` | Não (gerado) |
 
 ## Colunas do CSV
 
@@ -57,10 +58,10 @@ Essenciais manuais sem link (o colaborador precisa pedir): `python gerar_guia.py
 
 ## Segurança
 
-- O comando roda o `instalar.ps1` deste repositório como administrador no PC do colaborador. Conta do GitHub com 2FA; só o mantenedor com escrita.
+- O comando roda o `i.txt` deste repositório (via GitHub Pages, branch `main`, raiz) como administrador no PC do colaborador. Conta do GitHub com 2FA; só o mantenedor com escrita.
 - Nada interno no repositório: sem nomes, caminhos de rede, chaves ou instaladores.
 - `download` só executa arquivo com hash igual ao registrado.
-- `instalar.ps1` é publicado em UTF-8 sem BOM (o BOM quebra o `irm | iex`); o script regrava a cópia elevada com BOM para o PowerShell 5.1 ler os acentos.
+- `instalar.ps1` e `i.txt` são publicados em UTF-8 sem BOM (o BOM quebra o `irm | iex`); o script regrava a cópia elevada com BOM para o PowerShell 5.1 ler os acentos.
 
 ## Pendências
 

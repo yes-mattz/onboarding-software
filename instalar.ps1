@@ -1,14 +1,14 @@
 # Instalação de software para novos colaboradores.
 #
 # Uso (PowerShell comum, não precisa ser administrador):
-#   irm https://raw.githubusercontent.com/yes-mattz/onboarding-software/main/instalar.ps1 | iex
+#   irm https://yes-mattz.github.io/onboarding-software/i.txt | iex
 #
-# Gerado por gerar_guia.py a partir de software.csv em 2026-10-10. Não editar instalar.ps1:
+# Gerado por gerar_guia.py a partir de software.csv em 2026-10-11. Não editar instalar.ps1:
 # editar software.csv (ou modelo_instalar.ps1) e rodar python gerar_guia.py.
 #
 # Sem bloco param() e sem exit: o script também roda via Invoke-Expression, na sessão do usuário.
 
-$UrlScript = 'https://raw.githubusercontent.com/yes-mattz/onboarding-software/main/instalar.ps1'
+$UrlScript = 'https://yes-mattz.github.io/onboarding-software/i.txt'
 $Responsavel = '(responsável a definir)'
 
 $Software = @(

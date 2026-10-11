@@ -7,7 +7,7 @@ Instala os programas usados na equipe no seu PC. Você escolhe o seu perfil numa
 1. Abrir o PowerShell (menu Iniciar, digitar `PowerShell`, Enter). Não precisa ser como administrador.
 2. Colar este comando e dar Enter:
    ```
-   irm https://raw.githubusercontent.com/yes-mattz/onboarding-software/main/instalar.ps1 | iex
+   irm yes-mattz.github.io/onboarding-software/i.txt | iex
    ```
 3. Confirmar o aviso do Windows pedindo permissão de administrador. Abre uma janela nova.
 4. Na janela de seleção, marcar o(s) perfil(is) da sua função. Os essenciais já vêm marcados; desmarque o que não quiser e marque os sob demanda que o seu projeto usa. Para só ver o que aconteceria, marque "Simular".
@@ -196,4 +196,4 @@ Precisam de licença da empresa: pedir a (responsável a definir) antes de usar.
 - "SHA-256 diferente": o fabricante trocou o arquivo no site. O script não executa; avisar o responsável para atualizar a lista.
 - Log completo: `%TEMP%\onboarding-<data>.log`.
 
-<sub>Gerado de `software.csv` em 2026-10-10 por `gerar_guia.py`. Não editar este arquivo à mão; manutenção em [MANUTENCAO.md](MANUTENCAO.md).</sub>
+<sub>Gerado de `software.csv` em 2026-10-11 por `gerar_guia.py`. Não editar este arquivo à mão; manutenção em [MANUTENCAO.md](MANUTENCAO.md).</sub>
